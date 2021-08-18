@@ -3,6 +3,6 @@ Single Cell Network Visualization in Cytoscape
 
 # Dependencies
 Seurat  
-scPPIN
-kutils
-RCy3
+scPPIN  
+kutils  
+RCy3  
