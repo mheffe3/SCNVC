@@ -1,10 +1,9 @@
 Package: SCNVC
 Title: Generates Single Cell Networks that can be used in Cytoscape
 Version: 1.0
-Authors@R: Matt Heffernan, University of Illinois at Chicago
-Description: This package provides useful functions for loading in scppin data, uses scPPIN functions to find highly expressed genes
-and then loads it into .csv files that Cytoscape can use
-Imports: Seurat, scPPIN, data.table, kutils, RCy3
+Authors: Matt Heffernan, University of Illinois at Chicago
+Description: This package provides useful functions for loading in scppin data, uses scPPIN functions to find highly expressed genes and then loads it into .csv files that Cytoscape can use
+Imports: Seurat, scPPIN, kutils, RCy3
 Remotes: floklimm/scPPIN, bioc::RCy3
 License: none
 Encoding: UTF-8

@@ -5,7 +5,12 @@
 # library(kutils)
 # library(RCy3)
 
-
+#' @import Seurat
+#' @import scPPIN
+#' @import RCy3
+#' @importFrom kutils writeCSV
+#' 
+#' @export
 getFile <- function(filepath)
 {
   if((file.exists(filepath)) & (file.size(filepath) > 0))
@@ -34,7 +39,7 @@ getFile <- function(filepath)
   
 }
 
-
+#' @export
 Preprocess <- function(Data)
 {
   SData <- CreateSeuratObject(counts = Data, min.cells = 3,min.features = 300,names.delim = "\\.")
@@ -61,6 +66,7 @@ Preprocess <- function(Data)
 }
 
 
+#' @export
 getPValues <- function(SData)
 {
   PValues <- FindAllMarkers(SData, return.thresh=1, logfc.threshold = 0.0)
@@ -72,6 +78,7 @@ getPValues <- function(SData)
 #scPPIN
 
 
+#' @export
 getClusterList <- function(Data, PValues)
 {
   nClusters = nlevels(seqwell@meta.data$seurat_clusters)
@@ -87,6 +94,7 @@ getClusterList <- function(Data, PValues)
 }
 
 
+#' @export
 FM <- function(pvalues)
 {
   ppin <- loadPPIN()
@@ -102,6 +110,7 @@ FM <- function(pvalues)
 }
 
 
+#' @export
 getEdgeWeights <- function(functionalModule, countTable)
 {
   network <- as.data.frame(get.edgelist(functionalModule))
@@ -126,6 +135,7 @@ getEdgeWeights <- function(functionalModule, countTable)
 }
 
 
+#' @export
 SendToCSV <- function(functionalModule, network, Ps, name)
 {
   filename = paste(name, "N.csv", sep="")
@@ -138,6 +148,7 @@ SendToCSV <- function(functionalModule, network, Ps, name)
 }
 
 
+#' @export
 getDataFiles <- function(SData, Ps)
 {
   countTable <- SData[["RNA"]]@data
