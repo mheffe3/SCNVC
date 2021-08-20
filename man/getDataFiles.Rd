@@ -15,11 +15,14 @@ getDataFiles(SData, Ps)
 \arguments{
   \item{SData}{
 %%     ~~Describe \code{SData} here~~
-A Seurat object containing the scppi data 
+A Seurat object containing preprocessed data 
 }
   \item{Ps}{
 %%     ~~Describe \code{Ps} here~~
 Pvalues containing the Pvalues for each gene in the clusters
+}
+  \item{cnames}{
+A list containing names for each of the clusters.  Defaults to NULL and uses C1, C2... instaed
 }
 }
 \details{
@@ -41,7 +44,7 @@ Does not return any variable.  Creates 2 CSV files for every cluster.  One for t
 Matt Heffernan, University of Illinois at Chicago
 }
 \note{
-%%  ~~further notes~~
+calls getClusterList, getFM, getEdgeWeightsF, and SendToCSV
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

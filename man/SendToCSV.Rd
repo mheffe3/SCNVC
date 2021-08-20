@@ -49,7 +49,7 @@ Does not return any varibale, but instead creates two csv files in the current w
 Matt Heffernan, University of Illinois at Chicago
 }
 \note{
-%%  ~~further notes~~
+called by getDataFiles
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

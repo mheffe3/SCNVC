@@ -1,7 +1,7 @@
-\name{FM}
-\alias{FM}
+\name{getFM}
+\alias{getFM}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{FM
+\title{getFM
 %%  ~~function to do ... ~~
 }
 \description{
@@ -9,7 +9,7 @@
 Calls scPPIN functions to compute a steiner tree that finds the best solution to the connections in a cluster from the single cell data and returns it in functional module object.  Called by getDataFiles
 }
 \usage{
-FM(pvalues)
+getFM(pvalues)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -37,7 +37,7 @@ Returns a functional module containing the solution to the connections of the pp
 Matt Heffernan, University of Illinois at Chicago
 }
 \note{
-%%  ~~further notes~~
+Called by getDataFiles and getCyGraphs
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -50,7 +50,7 @@ Matt Heffernan, University of Illinois at Chicago
 ##-- ==>  Define data, use random,
 ##--	or do  help(data=index)  for the standard data sets.
 
-FM(pValues)
+getFM(pValues)
 
 ## The function is currently defined as
 function (pvalues) 

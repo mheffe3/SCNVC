@@ -1,24 +1,22 @@
-\name{getEdgeWeights}
-\alias{getEdgeWeights}
+\name{getEdgeWeightsF}
+\alias{getEdgeWeightsF}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{getEdgeWeights
+\title{getEdgeWeightsF
 %%  ~~function to do ... ~~
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
-This functions takes in a functional module from scPPIN and a countTable for gene reads as a data frame and computes the edge weight for each connection in the functional module and returns a network data frame with edge weights included.  
+This functions takes in a functional module from scPPIN and a countTable for gene reads as a data frame and computes the edge weight for each connection in the functional module and returns a network data frame with edge weights included. Used for outputting files.    
 }
 \usage{
-getEdgeWeights(functionalModule, countTable)
+getEdgeWeightsF(FM, countTable)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{functionalModule}{
-%%     ~~Describe \code{functionalModule} here~~
-A scPPIN object that is returned from the function FM.  Used here to generate the network
+  \item{FM}{
+A scPPIN object that is returned from the function getFM.  Used here to generate the network
 }
   \item{countTable}{
-%%     ~~Describe \code{countTable} here~~
 A data frame containing counts of gene expression for different cell barcodes.  Used here to generate edge weights
 }
 }
@@ -41,7 +39,7 @@ returns a data frame containing the network and the edge weights associated with
 Matt Heffernan, University of Illinois at Chicago
 }
 \note{
-%%  ~~further notes~~
+Called by getDataFiles
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -54,7 +52,7 @@ Matt Heffernan, University of Illinois at Chicago
 ##-- ==>  Define data, use random,
 ##--	or do  help(data=index)  for the standard data sets.
 
-getEdgeWeights(f,countTable)
+getEdgeWeightsF(f,countTable)
 
 ## The function is currently defined as
 function (functionalModule, countTable) 

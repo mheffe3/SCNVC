@@ -41,7 +41,7 @@ A list containing the clusters in the Seurat object
 Matt Heffernan, University of Illinois at Chicago
 }
 \note{
-%%  ~~further notes~~
+Called by getDataFiles and getCyGraphs
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
